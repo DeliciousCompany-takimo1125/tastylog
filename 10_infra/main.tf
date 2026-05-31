@@ -13,7 +13,6 @@ terraform {
     bucket  = "github-actions-terraform-takimoto"
     key     = "tastylog-dev.tfstate"
     region  = "ap-northeast-1"
-    profile = "terraform"
   }
 }
 
@@ -21,12 +20,10 @@ terraform {
 # Provider
 # ---------------------------------------------
 provider "aws" {
-  profile = "terraform"
   region  = "ap-northeast-1"
 }
 
 provider "aws" {
   alias   = "virginia"
-  profile = "terraform"
   region  = "us-east-1"
 }
